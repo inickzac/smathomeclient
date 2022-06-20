@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import Pages from '../../pages/Pages';
 
 import {
   CDBSidebar,
@@ -17,15 +18,15 @@ function SideBar(props) {
       <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Contrast</CDBSidebarHeader>
       <CDBSidebarContent>
         <CDBSidebarMenu>
-          <NavLink to="/" active='true'>
-            <CDBSidebarMenuItem icon="th-large" active={pathname === "/"}>Dashboard
+          <NavLink to= {Pages.dashboard} active='true'>
+            <CDBSidebarMenuItem icon="th-large" active={pathname === Pages.dashboard}>Dashboard
             </CDBSidebarMenuItem>
           </NavLink>
-          <NavLink to="/management" active='true'>
-            <CDBSidebarMenuItem icon="sticky-note" active={pathname === "/management"}>Management</CDBSidebarMenuItem >
+          <NavLink to={Pages.management} active='true'>
+            <CDBSidebarMenuItem icon="sticky-note" active={pathname === Pages.management}>Management</CDBSidebarMenuItem >
           </NavLink>
-          <NavLink to="/statistics">
-            <CDBSidebarMenuItem icon="chart-line" active={pathname === "/statistics"} iconType="solid">Statistics</CDBSidebarMenuItem>
+          <NavLink to={Pages.statistics}>
+            <CDBSidebarMenuItem icon="chart-line" active={pathname === Pages.statistics} iconType="solid">Statistics</CDBSidebarMenuItem>
           </NavLink>
         </CDBSidebarMenu>
       </CDBSidebarContent>
