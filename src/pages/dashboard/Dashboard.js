@@ -11,7 +11,6 @@ const dashboard = props => (
     </section>
 )
 
-
 function Dashboard() {
     return (
         <SiteWrapper>
